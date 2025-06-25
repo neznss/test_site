@@ -5,24 +5,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Tokyo Ghoul Search</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- шрифт в духе аниме -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>Tokyo Ghoul Search</h1>
+    <nav>
+      <button class="tab active" data-tab="search">Поиск</button>
+      <button class="tab" data-tab="favorites">Моя коллекция</button>
+    </nav>
     <form id="searchForm">
       <input type="text" id="query" placeholder="Введите запрос..." required>
       <button type="submit">Найти</button>
     </form>
   </header>
-  <main>
+
+  <!-- Поиск -->
+  <main id="tab-search" class="tab-content active">
     <section id="images" class="results"></section>
     <section id="videos" class="results"></section>
   </main>
+
+  <!-- Избранное -->
+  <main id="tab-favorites" class="tab-content">
+    <section id="fav-items" class="results"></section>
+  </main>
+
   <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
 
